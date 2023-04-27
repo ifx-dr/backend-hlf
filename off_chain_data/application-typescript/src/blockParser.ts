@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Identity } from '@hyperledger/fabric-gateway';
-import { common, ledger, msp, peer } from '@hyperledger/fabric-protos';
+import { common, ledger, peer } from '@hyperledger/fabric-protos';
 import { assertDefined, cache } from './utils';
 
 export interface Block {
@@ -16,7 +15,7 @@ export interface Block {
 
 export interface Transaction {
     getChannelHeader(): common.ChannelHeader;
-    getCreator(): Identity;
+    getCreator(): Uint8Array;
     getValidationCode(): number;
     isValid(): boolean;
     getNamespaceReadWriteSets(): NamespaceReadWriteSet[];
@@ -107,14 +106,7 @@ function newTransaction(payload: Payload): Transaction {
 
     return {
         getChannelHeader: () => payload.getChannelHeader(),
-        getCreator: () => {
-            const creatorBytes = payload.getSignatureHeader().getCreator_asU8();
-            const creator = msp.SerializedIdentity.deserializeBinary(creatorBytes);
-            return {
-                mspId: creator.getMspid(),
-                credentials: creator.getIdBytes_asU8(),
-            };
-        },
+        getCreator: () => payload.getSignatureHeader().getCreator_asU8(),
         getNamespaceReadWriteSets: () => transaction.getReadWriteSets()
             .flatMap(readWriteSet => readWriteSet.getNamespaceReadWriteSets()),
         getValidationCode: () => payload.getTransactionValidationCode(),
