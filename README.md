@@ -1,5 +1,7 @@
 [//]: # (SPDX-License-Identifier: CC-BY-4.0)
 
+This repository is the original code of Hyperledger Fabric with /bin and config files. It is an exercise for the backend deployment on OpenShift. It does not contain contents related to the voting app and can be deleted.
+
 # Hyperledger Fabric Samples
 
 [![Build Status](https://dev.azure.com/Hyperledger/Fabric-Samples/_apis/build/status/Fabric-Samples?branchName=main)](https://dev.azure.com/Hyperledger/Fabric-Samples/_build/latest?definitionId=28&branchName=main)
