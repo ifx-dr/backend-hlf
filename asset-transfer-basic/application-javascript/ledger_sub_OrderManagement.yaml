@@ -1,0 +1,123 @@
+OntologyInfo:
+  Name: OrderManagement.owl
+  Domains:
+    - Supply Chain
+  Repo: semantic-web-projects/digital-reference/order_management
+  Default: main
+  Platform: GitLab
+  AccessToken: glpat-tbi7Q9X_rsrZZg8zC9Cw
+BlockchainInfo:
+  FileName: ./blockchain/blockchain_hist_sub_OrderManagement.xlsx
+  OutFileName: ./blockchain/blockchain_hist_sub_OrderManagement.xlsx
+UserInfo:
+  - ID: member1
+    Name: Hans
+    Password: '111'
+    Email: 111@gmail.com
+    Tokens: 110
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 17.4.2023, 11:16:45 (CET)
+    LastParticipation_Internal: Mon Apr 17 2023 09:16:45 GMT+0000 (Coordinated Universal Time)
+    LobeOwner:
+      - Supply Chain
+    Expert: []
+  - ID: member2
+    Name: Philipp
+    Password: '222'
+    Email: 222@gmail.com
+    Tokens: 100
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 23.1.2023, 01:00:00 (CET)
+    LastParticipation_Internal: Mon Jan 23 2023 00:00:00 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+  - ID: member3
+    Name: Marta
+    Password: '333'
+    Email: 333@gmail.com
+    Tokens: 100
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 9.3.2023, 11:02:02 (CET)
+    LastParticipation_Internal: Thu Mar 09 2023 10:02:02 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+  - ID: member4
+    Name: Yipeng
+    Password: '444'
+    Email: 444@gmail.com
+    Tokens: 110
+    Total_Proposal: 5
+    Total_Accepted_Proposal: 0
+    LastParticipation: 17.4.2023, 11:03:02 (CET)
+    LastParticipation_Internal: Mon Apr 17 2023 09:03:02 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+OngoingProposalInfo: []
+ClosedProposalInfo:
+  - ID: proposal0
+    State: accept
+    EndDate: Thu Mar 16 2023 14:38:27 GMT+0000 (Coordinated Universal Time)
+    Veto: false
+    URI: n/a
+    Message: n/a
+    Author: member4
+    Domain: Supply Chain
+    LobeOwner: member1
+  - ID: proposal1
+    State: accept
+    EndDate: 23.03.2023 10:09 (CET)
+    Veto: false
+    URI: n/a
+    Message: n/a
+    Author: member4
+    Domain: Supply Chain
+    LobeOwner: member1
+  - ID: proposal2
+    State: accept by lobe owner
+    StartDate: 24.3.2023, 14:54:33 (CET)
+    EndDate: 24.3.2023, 15:31:06 (CET)
+    EndDate_Internal: Fri Mar 24 2023 14:31:06 GMT+0000 (Coordinated Universal Time)
+    Veto: false
+    URI: n/a
+    Message: n/a
+    Author: member4
+    Domain: Supply Chain
+    LobeOwner: member1
+  - ID: proposal3
+    State: accept by lobe owner
+    StartDate: 31.3.2023, 11:25:18 (CET)
+    EndDate: 31.3.2023, 12:01:34 (CET)
+    EndDate_Internal: Fri Mar 31 2023 10:01:34 GMT+0000 (Coordinated Universal Time)
+    Veto: false
+    URI: >-
+      https://gitlab.intra.infineon.com/semantic-web-projects/digital-reference/order_management/-/commit/1895c45b96efa33a413581a68a5748007b6fb6ac,
+    Message: Names of data properties adjusted
+    Author: member4
+    Domain: Supply Chain
+    LobeOwner: member1
+  - ID: proposal4
+    State: accept by lobe owner
+    StartDate: 17.4.2023, 11:03:02 (CET)
+    StartDate_Internal: Mon Apr 17 2023 09:03:02 GMT+0000 (Coordinated Universal Time)
+    EndDate: 17.4.2023, 11:16:47 (CET)
+    EndDate_Internal: Mon Apr 17 2023 09:16:47 GMT+0000 (Coordinated Universal Time)
+    Veto: false
+    URI: >-
+      https://gitlab.intra.infineon.com/semantic-web-projects/digital-reference/order_management/-/commit/50873a28b7e97ba8d65492c7a7938f0fc336ac02
+    Message: 'update test 11: OrderManagement.owl, Labels added for classes'
+    Author: member4
+    Domain: Supply Chain
+    LobeOwner: member1
+NewBlockRequest:
+  newBlockWaiting: 'false'
+  proposalID: n/a
+  author: n/a
+  lobeOwner: n/a
+  supervisor: n/a
+LatestDR: >-
+  https://gitlab.intra.infineon.com/semantic-web-projects/digital-reference/order_management/-/commit/90c783a6e4ff122dbc160ccf0a2745e78a024c73
+FileHash: >-
+  https://gitlab.intra.infineon.com/semantic-web-projects/digital-reference/order_management/-/raw/90c783a6e4ff122dbc160ccf0a2745e78a024c73/OrderManagement.owl?inline=false

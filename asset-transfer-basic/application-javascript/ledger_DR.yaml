@@ -1,0 +1,126 @@
+OntologyInfo:
+  Name: DigitalReference.ttl
+  Domains:
+    - Planning
+    - Time
+    - Supply Chain
+    - Organisation
+    - Semiconductor Production
+    - Product
+    - Power
+    - Sensor
+    - Semi-conductor Development
+    - System
+    - Process
+    - Wired Communication
+    - Cloud
+    - Battery Management System
+  Repo: tibonto/dr
+  Default: master
+  Platform: GitHub
+  AccessToken: n/a
+BlockchainInfo:
+  FileName: ./blockchain/blockchain_hist_DR.xlsx
+  OutFileName: ./blockchain/blockchain_hist_DR.xlsx
+UserInfo:
+  - ID: member1
+    Name: Hans
+    Password: '111'
+    Email: 111@gmail.com
+    Tokens: 990
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 15.5.2023, 14:26:50 (CET)
+    LastParticipation_Internal: Mon May 15 2023 12:26:50 GMT+0000 (Coordinated Universal Time)
+    LobeOwner:
+      - Planning
+      - Time
+      - Supply Chain
+      - Organisation
+      - Semiconductor Production
+    Expert: []
+  - ID: member2
+    Name: Philipp
+    Password: '222'
+    Email: 222@gmail.com
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 23.1.2023, 01:00:00 (CET)
+    LastParticipation_Internal: Mon Jan 23 2023 00:00:00 GMT+0000 (Coordinated Universal Time)
+    LobeOwner:
+      - Product
+      - Power
+      - Sensor
+      - Semi-conductor Development
+    Expert: []
+  - ID: member3
+    Name: Marta
+    Password: '333'
+    Email: 333@gmail.com
+    Tokens: 1020
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 9.3.2023, 11:02:02 (CET)
+    LastParticipation_Internal: Thu Mar 09 2023 10:02:02 GMT+0000 (Coordinated Universal Time)
+    LobeOwner:
+      - System
+      - Process
+      - Wired Communication
+      - Cloud
+      - Battery Management System
+    Expert: []
+  - ID: member4
+    Name: Yipeng
+    Password: '444'
+    Email: 444@gmail.com
+    Tokens: 980
+    Total_Proposal: 1
+    Total_Accepted_Proposal: 1
+    LastParticipation: 12.5.2023, 16:01:30 (CET)
+    LastParticipation_Internal: Fri May 12 2023 14:01:30 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+OngoingProposalInfo: []
+ClosedProposalInfo:
+  - ID: proposal0
+    State: accept
+    EndDate: Fri Feb 24 2023 15:05:24 GMT+0000 (Coordinated Universal Time)
+    Veto: false
+  - ID: proposal1
+    State: accept by lobe owner
+    StartDate: 7.3.2023, 11:02:04 (CET)
+    StartDate_Internal: Tue Mar 07 2023 10:02:04 GMT+0000 (Coordinated Universal Time)
+    EndDate: 9.3.2023, 11:02:04 (CET)
+    EndDate_Internal: Thu Mar 09 2023 10:02:04 GMT+0000 (Coordinated Universal Time)
+    Veto: false
+    URI: >-
+      https://github.com/tibonto/dr/commit/427f690a506c4404aebf3dbb532def01b5d895cd
+    Message: Battery Managemnt System ontology added
+    Author: member4
+    Domain: Battery Management System
+    LobeOwner: member3
+  - ID: proposal2
+    State: accept by lobe owner
+    StartDate: 14.5.2023, 16:01:30 (CET)
+    StartDate_Internal: Sun May 14 2023 14:01:30 GMT+0000 (Coordinated Universal Time)
+    EndDate: 15.5.2023, 14:26:52 (CET)
+    EndDate_Internal: Mon May 15 2023 12:26:52 GMT+0000 (Coordinated Universal Time)
+    Veto: false
+    URI: >-
+      https://github.com/tibonto/dr/commit/39bc5ee3b8e4774e66bfc7e7150ccfbdc30223a7
+    Message: >-
+      update test 13: DigitalReference.ttl, Lobes representations added, lobe
+      owners partially assigned
+    Author: member4
+    Domain: Supply Chain
+    LobeOwner: member1
+NewBlockRequest:
+  newBlockWaiting: 'false'
+  proposalID: n/a
+  author: n/a
+  lobeOwner: n/a
+  supervisor: n/a
+LatestDR: https://github.com/tibonto/dr/commit/39bc5ee3b8e4774e66bfc7e7150ccfbdc30223a7
+FileHash: >-
+  https://github.com/tibonto/dr/archive/39bc5ee3b8e4774e66bfc7e7150ccfbdc30223a7.zip

@@ -1,0 +1,89 @@
+UserInfo:
+  - ID: 'member1'
+    Name: 'Hans'
+    Password: '111'
+    Email: '111@gmail.com'
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: '23.01.2023'
+    LobeOwner: ['Planning','Time','Supply Chain','Organisation','Semiconductor Production']
+    Expert: []
+    # AllRoles: {"Manufacturing":"Expert"}
+
+
+  - ID: 'member2'
+    Name: 'Philipp'
+    Password: '222'
+    Email: '222@gmail.com'
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: '23.01.2023'
+    LobeOwner: ['Product','Power','Sensor','Semi-conductor Development']
+    Expert: []
+    # AllRoles: {"Manufacturing":"Expert"}
+
+  - ID: 'member3'
+    Name: 'Marta'
+    Password: '333'
+    Email: '333@gmail.com'
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: '23.01.2023'
+    LobeOwner: ['System','Process','Wired Communication','Cloud']
+    Expert: []
+    # AllRoles: {"Manufacturing":"Expert"}
+
+  - ID: 'member4'
+    Name: 'Yipeng'
+    Password: '444'
+    Email: '444@gmail.com'
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: '23.01.2023'
+    LobeOwner: []
+    Expert: []
+    # AllRoles: {"Manufacturing":"Expert"}  
+
+OngoingProposalInfo:
+  - ID: 'proposal1'
+    URI: 'https://github.com/tibonto/dr/commit/08cc171ae8fe31f2c84c826b4cc42f722158e303'
+    Domain: 'Product'
+    Valid: '1'
+    AuthorID: 'member2'
+    Proposal_Message: 'Add a new use case in the ontology Manufacture, the use case called Danobat'
+    Creation_Date: '10.11.2022'
+    State: 'ongoing'
+    Type: 'newProposal'
+    OriginalID: ''
+    NumAcceptedVotes: 0
+    NumRejectedVotes: 0
+    AcceptedVotes: []
+    RejectedVotes: []
+    Hash: 'https://github.com/tibonto/dr/archive/08cc171ae8fe31f2c84c826b4cc42f722158e303.zip'
+  
+ClosedProposalInfo:
+
+
+AllLobes:
+  Planning:
+  Time:
+  Supply Chain:
+  Organisation:
+  Semiconductor Production:
+  Product:
+  Power:
+  Sensor:
+  Semi-conductor Development:
+  System:
+  Process:
+  Wired Communication:
+  Cloud:
+
+# choose: save user info in the ledger or database (MySQL)
+# clear the template proposals, create new ones according to the actual case
+# temproraly ignore the hash of the proposal
+# a proposal need to be specified to a lobe/domain

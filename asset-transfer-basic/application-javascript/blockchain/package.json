@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "node-xlsx": "^0.21.0",
+    "officegen": "^0.6.5",
+    "sha256": "^0.2.0"
+  }
+}

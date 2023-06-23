@@ -1,0 +1,83 @@
+OntologyInfo:
+  Name: ArrowHead.owl
+  Domains:
+    - Arrowhead
+    - Automation Technologies
+    - OOSM
+    - Order Management
+    - Power
+    - PRIMA
+    - PMV
+    - Product
+    - RAMI40
+    - Planning
+    - SemiOps
+    - Sensor
+    - Time
+    - CO2 Saving, Battery Management Sysytem
+  Repo: ifx-dr/Update-Test-DR-Sub-Onto
+  Default: main
+BlockchainInfo:
+  FileName: ./blockchain/blockchain_hist_sub_arrowhead.xlsx
+  OutFileName: ./blockchain/blockchain_hist_sub_arrowhead.xlsx
+UserInfo:
+  - ID: member1
+    Name: Hans
+    Password: '111'
+    Email: 111@gmail.com
+    Tokens: 1020
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: Wed Mar 08 2023 14:16:43 GMT+0000 (Coordinated Universal Time)
+    LobeOwner:
+      - Arrowhead
+      - Automation Technologies
+      - OOSM
+      - Order Management
+      - Power
+    Expert: []
+  - ID: member2
+    Name: Philipp
+    Password: '222'
+    Email: 222@gmail.com
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: Mon Feb 27 2023 08:31:53 GMT+0000 (Coordinated Universal Time)
+    LobeOwner:
+      - PRIMA
+      - PMV
+      - Product
+      - RAMI40
+      - Planning
+    Expert: []
+  - ID: member3
+    Name: Marta
+    Password: '333'
+    Email: 333@gmail.com
+    Tokens: 980
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: Wed Mar 01 2023 16:01:11 GMT+0000 (Coordinated Universal Time)
+    LobeOwner:
+      - SemiOps
+      - Sensor
+      - Time
+      - CO2 Saving, Battery Management Sysytem
+    Expert: []
+  - ID: member4
+    Name: Yipeng
+    Password: '444'
+    Email: 444@gmail.com
+    Tokens: 970
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: Wed Mar 08 2023 14:02:39 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+OngoingProposalInfo: []
+ClosedProposalInfo:
+  - ID: proposal1
+    State: accept
+    EndDate: Wed Mar 08 2023 14:16:46 GMT+0000 (Coordinated Universal Time)
+    Veto: false

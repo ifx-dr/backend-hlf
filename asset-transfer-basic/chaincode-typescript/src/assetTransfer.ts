@@ -1,20 +1,18 @@
 /*
- * Copyright IBM Corp. All Rights Reserved.
- *
  * SPDX-License-Identifier: Apache-2.0
  */
-
-'use strict';
-
 // Deterministic JSON.stringify()
-const stringify  = require('json-stringify-deterministic');
-const sortKeysRecursive  = require('sort-keys-recursive');
-const { Contract } = require('fabric-contract-api');
+import {Context, Contract, Info, Returns, Transaction} from 'fabric-contract-api';
+import stringify from 'json-stringify-deterministic';
+import sortKeysRecursive from 'sort-keys-recursive';
+import {Asset} from './asset';
 
-class AssetTransfer extends Contract {
+@Info({title: 'AssetTransfer', description: 'Smart contract for trading assets'})
+export class AssetTransferContract extends Contract {
 
-    async InitLedger(ctx) {
-        const assets = [
+    @Transaction()
+    public async InitLedger(ctx: Context): Promise<void> {
+        const assets: Asset[] = [
             {
                 ID: 'asset1',
                 Color: 'blue',
@@ -66,11 +64,13 @@ class AssetTransfer extends Contract {
             // we insert data in alphabetic order using 'json-stringify-deterministic' and 'sort-keys-recursive'
             // when retrieving data, in any lang, the order of data will be the same and consequently also the corresonding hash
             await ctx.stub.putState(asset.ID, Buffer.from(stringify(sortKeysRecursive(asset))));
+            console.info(`Asset ${asset.ID} initialized`);
         }
     }
 
     // CreateAsset issues a new asset to the world state with given details.
-    async CreateAsset(ctx, id, color, size, owner, appraisedValue) {
+    @Transaction()
+    public async CreateAsset(ctx: Context, id: string, color: string, size: number, owner: string, appraisedValue: number): Promise<void> {
         const exists = await this.AssetExists(ctx, id);
         if (exists) {
             throw new Error(`The asset ${id} already exists`);
@@ -83,13 +83,13 @@ class AssetTransfer extends Contract {
             Owner: owner,
             AppraisedValue: appraisedValue,
         };
-        //we insert data in alphabetic order using 'json-stringify-deterministic' and 'sort-keys-recursive'
+        // we insert data in alphabetic order using 'json-stringify-deterministic' and 'sort-keys-recursive'
         await ctx.stub.putState(id, Buffer.from(stringify(sortKeysRecursive(asset))));
-        return JSON.stringify(asset);
     }
 
     // ReadAsset returns the asset stored in the world state with given id.
-    async ReadAsset(ctx, id) {
+    @Transaction(false)
+    public async ReadAsset(ctx: Context, id: string): Promise<string> {
         const assetJSON = await ctx.stub.getState(id); // get the asset from chaincode state
         if (!assetJSON || assetJSON.length === 0) {
             throw new Error(`The asset ${id} does not exist`);
@@ -98,7 +98,8 @@ class AssetTransfer extends Contract {
     }
 
     // UpdateAsset updates an existing asset in the world state with provided parameters.
-    async UpdateAsset(ctx, id, color, size, owner, appraisedValue) {
+    @Transaction()
+    public async UpdateAsset(ctx: Context, id: string, color: string, size: number, owner: string, appraisedValue: number): Promise<void> {
         const exists = await this.AssetExists(ctx, id);
         if (!exists) {
             throw new Error(`The asset ${id} does not exist`);
@@ -117,7 +118,8 @@ class AssetTransfer extends Contract {
     }
 
     // DeleteAsset deletes an given asset from the world state.
-    async DeleteAsset(ctx, id) {
+    @Transaction()
+    public async DeleteAsset(ctx: Context, id: string): Promise<void> {
         const exists = await this.AssetExists(ctx, id);
         if (!exists) {
             throw new Error(`The asset ${id} does not exist`);
@@ -126,13 +128,16 @@ class AssetTransfer extends Contract {
     }
 
     // AssetExists returns true when asset with given ID exists in world state.
-    async AssetExists(ctx, id) {
+    @Transaction(false)
+    @Returns('boolean')
+    public async AssetExists(ctx: Context, id: string): Promise<boolean> {
         const assetJSON = await ctx.stub.getState(id);
         return assetJSON && assetJSON.length > 0;
     }
 
-    // TransferAsset updates the owner field of asset with given id in the world state.
-    async TransferAsset(ctx, id, newOwner) {
+    // TransferAsset updates the owner field of asset with given id in the world state, and returns the old owner.
+    @Transaction()
+    public async TransferAsset(ctx: Context, id: string, newOwner: string): Promise<string> {
         const assetString = await this.ReadAsset(ctx, id);
         const asset = JSON.parse(assetString);
         const oldOwner = asset.Owner;
@@ -143,7 +148,9 @@ class AssetTransfer extends Contract {
     }
 
     // GetAllAssets returns all assets found in the world state.
-    async GetAllAssets(ctx) {
+    @Transaction(false)
+    @Returns('string')
+    public async GetAllAssets(ctx: Context): Promise<string> {
         const allResults = [];
         // range query with empty string for startKey and endKey does an open-ended query of all assets in the chaincode namespace.
         const iterator = await ctx.stub.getStateByRange('', '');
@@ -162,6 +169,5 @@ class AssetTransfer extends Contract {
         }
         return JSON.stringify(allResults);
     }
-}
 
-module.exports = AssetTransfer;
+}

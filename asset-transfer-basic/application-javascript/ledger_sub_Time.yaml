@@ -1,0 +1,60 @@
+OntologyInfo:
+  Name: time.owl
+  Domains:
+    - Time
+  Repo: semantic-web-projects/digital-reference/Time
+  Default: main
+  Platform: GitLab
+  AccessToken: glpat-tbi7Q9X_rsrZZg8zC9Cw
+BlockchainInfo:
+  FileName: ./blockchain/blockchain_hist_sub_Time.xlsx
+  OutFileName: ./blockchain/blockchain_hist_sub_Time.xlsx
+UserInfo:
+  - ID: member1
+    Name: Hans
+    Password: '111'
+    Email: 111@gmail.com
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 24.2.2023, 16:05:22 (CET)
+    LastParticipation_Internal: Fri Feb 24 2023 15:05:22 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+  - ID: member2
+    Name: Philipp
+    Password: '222'
+    Email: 222@gmail.com
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 23.1.2023, 01:00:00 (CET)
+    LastParticipation_Internal: Mon Jan 23 2023 00:00:00 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: 
+      - Time
+    Expert: []
+  - ID: member3
+    Name: Marta
+    Password: '333'
+    Email: 333@gmail.com
+    Tokens: 1020
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 9.3.2023, 11:02:02 (CET)
+    LastParticipation_Internal: Thu Mar 09 2023 10:02:02 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+  - ID: member4
+    Name: Yipeng
+    Password: '444'
+    Email: 444@gmail.com
+    Tokens: 1000
+    Total_Proposal: 0
+    Total_Accepted_Proposal: 0
+    LastParticipation: 23.1.2023, 01:00:00 (CET)
+    LastParticipation_Internal: Mon Jan 23 2023 00:00:00 GMT+0000 (Coordinated Universal Time)
+    LobeOwner: []
+    Expert: []
+OngoingProposalInfo: []
+ClosedProposalInfo: []
+NewBlockRequest: null
